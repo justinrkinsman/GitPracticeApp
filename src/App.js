@@ -1,13 +1,26 @@
 import React, { Component } from "react"
 
 export class App extends Component {
-  render(){
-    return <>
-      <form>
-        <label htmlFor="taskInput">Add Tasks: </label>
-        <input type="text" name="taskInput" id="taskInput"></input>
-        <button type="submit">Submit</button>
-      </form>
-    </>
+  constructor(){
+    super();
+
+    this.state = {
+      task: { text: ''},
+      tasks: [],
+    };
+  }
+
+  render() {
+    const { task, tasks } = this.state
+
+    return (
+      <div>
+        <form>
+          <label htmlFor="taskInput">Enter tasks</label>
+          <input type='text' id='taskInput'/>
+          <button type='submit'>Add Task</button>
+        </form>
+      </div>
+    )
   }
 }

@@ -1,7 +1,12 @@
 import React, { Component } from "react"
 
-export class Practice extends Component {
-    render() {
-        return <h1>This is my practice page</h1>
-    }
+let taskArray = []
+
+function Submit(e) {
+    e.preventDefault()
+    let taskName = document.getElementById('taskInput').value
+    taskArray.push(taskName)
+    console.log(taskArray)
 }
+
+export {Submit}
