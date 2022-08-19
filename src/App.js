@@ -2,12 +2,12 @@ import React, { Component } from "react"
 
 export class App extends Component {
   render(){
-    return <div>Hello World</div>
-  }
-}
-
-export class NewDiv extends Component {
-  render(){
-    return <div>Hello yourself</div>
+    return <>
+      <form>
+        <label htmlFor="taskInput">Add Tasks: </label>
+        <input type="text" name="taskInput" id="taskInput"></input>
+        <button type="submit">Submit</button>
+      </form>
+    </>
   }
 }
